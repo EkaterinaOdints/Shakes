@@ -49,5 +49,13 @@ export default defineConfig({
         ],
       },
     }),
+    viteStaticCopy({
+      targets: [
+        {
+          src: "fonts/**/*",
+          dest: "assets/fonts",
+        },
+      ],
+    }),
   ],
 });
