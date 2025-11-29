@@ -1,0 +1,32 @@
+@font-face {
+  font-weight: 400;
+  font-family: "Gotham";
+  font-style: normal;
+  src: url("../fonts/Gotham-Book.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: "Gotham";
+  font-style: normal;
+  src: url("../fonts/Gotham-Medium.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: "Gotham";
+  font-style: normal;
+  src: url("../fonts/Gotham-Bold.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: 400 700;
+  font-family: "Overpass";
+  font-style: normal;
+  src: url("../fonts/Overpass.woff2") format("woff2"),
+    format(truetype-variations);
+  font-display: swap;
+}

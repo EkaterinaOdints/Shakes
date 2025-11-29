@@ -1,0 +1,359 @@
+.offers {
+  padding: 95px 0 304px;
+
+  &__wrapper {
+    display: grid;
+    grid-template-areas:
+      "title title"
+      "list  slider"
+      "reg   slider";
+    column-gap: 20px;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+  &__subtitle {
+    grid-area: title;
+    font-family: "Overpass", "Arial", sans-serif;
+    font-size: 55px;
+    line-height: 60px;
+    font-weight: 600;
+    max-width: 979px;
+    margin: 0 0 34px;
+  }
+
+  &__features-list {
+    grid-area: list;
+    list-style-type: none;
+    margin: 20px 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__feature {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+  }
+
+  &__feature-mark {
+    position: relative;
+    display: block;
+    flex-shrink: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #495cee;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+      width: 7px;
+      aspect-ratio: 1 / 1;
+      background-image: url("../../img/icons/check.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
+  &__slider-container {
+    position: relative;
+    grid-area: slider;
+    width: 841px;
+  }
+
+  &__slider {
+    width: 657px;
+    height: 228px;
+  }
+
+  &__slider-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #272627;
+    border-radius: 10px;
+  }
+
+  &__slider-item-image {
+    width: 160px;
+    height: 80px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__slider-button-wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 13px;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  &__slider-button {
+    position: relative;
+    width: 66px;
+    aspect-ratio: 1 / 1;
+    background-color: #3a3a3a;
+    padding: 0;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+    cursor: pointer;
+    pointer-events: all;
+    transition: background-color 0.3s, border-color 0.3s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+      width: 14px;
+      aspect-ratio: 1 / 1;
+      background-image: url("../../img/icons/angle.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+
+    &:hover {
+      background-color: #34bbda;
+      border-color: #34bbda;
+    }
+  }
+
+  &__slider-button--next {
+    transform: rotate(180deg);
+  }
+
+  &__registration {
+    grid-area: reg;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 21px;
+  }
+
+  &__registration-text {
+    align-self: center;
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  &__registration-button {
+    min-width: 241px;
+    padding: 17px 20px;
+  }
+
+  @media (max-width: 1919px) {
+    &__wrapper {
+      grid-template-areas:
+        "title  title"
+        "list   list"
+        "reg    slider";
+    }
+
+    &__slider-container {
+      margin-top: 20px;
+    }
+
+    &__registration {
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 1440px) {
+    &__slider-container {
+      width: 804px;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    padding: 82px 0 222px;
+
+    &__wrapper {
+      grid-template-areas:
+        "title title"
+        "list  slider"
+        "reg   slider";
+    }
+
+    &__subtitle {
+      font-size: 45px;
+      line-height: 55px;
+    }
+
+    &__slider-container {
+      width: 428px;
+    }
+
+    &__slider {
+      width: 351px;
+      height: 186px;
+    }
+
+    &__registration {
+      margin-top: 30px;
+      gap: 0;
+    }
+
+    &__registration-text {
+      font-size: 16px;
+      line-height: 35px;
+      align-self: flex-start;
+    }
+  }
+
+  @media (max-width: 960px) {
+    &__wrapper {
+      grid-template-columns: auto 428px;
+      margin-right: -19px;
+      column-gap: 13px;
+      align-items: start;
+    }
+
+    &__subtitle {
+      margin: 0 0 8px;
+    }
+
+    &__features-list {
+      margin: 8px 0 0;
+    }
+
+    &__slider-container {
+      margin-top: 0;
+    }
+
+    &__slider-item-image {
+      width: 120px;
+      height: 70px;
+    }
+
+    &__slider-button {
+      width: 50px;
+
+      &::before {
+        width: 12px;
+      }
+    }
+
+    &__registration {
+      flex-direction: row;
+      gap: 10px;
+      margin-top: 35px;
+    }
+
+    &__registration-text {
+      align-self: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 35px 0 100px;
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin-right: 0;
+    }
+
+    &__subtitle {
+      font-size: 30px;
+      line-height: 35px;
+    }
+
+    &__slider-container {
+      margin-top: 30px;
+      width: 100%;
+    }
+
+    &__slider-button-wrapper {
+      width: 90%;
+    }
+
+    &__registration {
+      width: 100%;
+      padding: 0 30px;
+      justify-content: space-evenly;
+    }
+  }
+
+  @media (max-width: 425px) {
+    padding: 20px 0 93px;
+
+    &__subtitle {
+      font-size: 25px;
+      line-height: 30px;
+      margin: 0 0 5px;
+    }
+
+    &__features-list {
+      margin: 0;
+      gap: 15px;
+    }
+
+    &__feature {
+      align-items: flex-start;
+    }
+
+    &__slider-container {
+      width: 320px;
+      margin-top: 15px;
+      align-self: center;
+    }
+
+    &__slider {
+      width: 100%;
+      height: 167px;
+    }
+
+    &__slider-item-image {
+      width: 106px;
+      height: 60px;
+    }
+
+    &__slider-button-wrapper {
+      position: static;
+      width: 100%;
+      transform: none;
+      justify-content: center;
+      margin-top: 11px;
+    }
+
+    &__slider-button {
+      width: 45px;
+
+      &::before {
+        width: 10px;
+      }
+    }
+
+    &__registration {
+      margin-top: 5px;
+      padding: 0;
+      gap: 7px;
+    }
+
+    &__registration-button {
+      min-width: 194px;
+      padding: 14px 20px;
+    }
+  }
+}

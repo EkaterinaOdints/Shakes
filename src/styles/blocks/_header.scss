@@ -1,0 +1,37 @@
+.header {
+  position: relative;
+  z-index: 5;
+  padding: 23px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  &__logo {
+    margin-top: 6px;
+  }
+
+  @media (max-width: 960px) {
+    padding: 20px 0 22px;
+
+    &__wrapper {
+      gap: 30px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 10px 0 16px;
+
+    &__wrapper {
+      align-items: center;
+    }
+
+    &__logo {
+      margin-top: 0;
+    }
+  }
+}
